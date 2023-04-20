@@ -1,0 +1,10 @@
+*{font-family: Dongle;}
+.fonttest1{color :aliceblue}
+.fonttest2{direction: rtl;}
+.fonttest3{letter-spacing:-0.1ch;}
+.fonttest4{line-height: 4ch;}
+.fonttest5{text-align: center;}
+.fonttest6{text-decoration: underline; text-decoration-color: red;}
+.fonttest7{text-indent: 2ch;}
+.fonttest8{text-shadow: 5px 5px 5px coral;}
+.fonttest9{text-transform: uppercase;}
