@@ -1,0 +1,43 @@
+.wrap{
+    width: 700px;
+    height: 5700px;
+    background-color: purple;
+    position: relative;
+}
+
+
+.container{
+    width: 500px;
+    height: 500px;
+    background-color: royalblue;
+    position: relative;
+}
+
+.container .item{
+    border: 3px dashed red;
+
+}
+.container .item:nth-child(1){
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.container .item:nth-child(2){
+    width: 120px;
+    height: 150px;
+    background-color: orange;
+    position: fixed;
+    right:30px;
+    bottom:30px;
+}
+.container .item:nth-child(3){
+    width: 70px;
+    height: 120px;
+    background-color: darkcyan;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
