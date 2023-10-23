@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc(key){
+            let num1 = document.getElementById("number1");
+            let num2 = document.getElementById("number2");
+            let resultField = document.getElementById("result");
+            switch(key){
+                case 0: resultField.value = parseInt(num1.value) + parseInt(num2.value); break;
+                case 1: resultField.value = parseInt(num1.value) - parseInt(num2.value);break;
+                case 2: resultField.value = parseInt(num1.value) * parseInt(num2.value);break;
+                case 3: resultField.value = parseInt(num1.value) / parseInt(num2.value);break;
+            }
+        }
+    </script>
+</head>
+<body>
+    숫자 1: <input type="text" id = "number1" value="9"><br>
+    숫자 2: <input type="text" id = "number2" value="6"><br>
+    <input type="button" name="" id="" class="button" onclick="calc(0)" value="+">
+    <input type="button" name="" id="" class="button" onclick="calc(1)" value="-">
+    <input type="button" name="" id="" class="button" onclick="calc(2)" value="*">
+    <input type="button" name="" id="" class="button" onclick="calc(3)" value="/">
+    연산결과 : <input type="text" name="" id="result" value="">
+</body>
+</html>
