@@ -1,0 +1,36 @@
+<html>
+<head>
+ <script>
+    let Operator = new Array("+", "-", "*");
+
+    function createExpresion(){
+        let length = Math.floor(Math.random() * 3 + 1);
+        let problem = document.getElementById("problem");
+
+        problem.value = "";
+
+        for (let i = 0; i < length; i++){
+            let randNum = Math.floor(Math.random() * 99 + 1);
+            let randOper = Operator[Math.floor(Math.random() * Operator.length)];
+            problem.value = problem.value + randNum + randOper;
+        }
+        problem.value = problem.value + Math.floor(Math.random() * 99 + 1);
+    }
+
+    function cal() {
+        let answer = document.getElementById("answer").value;
+        let s = document.getElementById("problem").value;
+        let solution = eval(s);
+        if(answer == solution) alert("정답입니다!");
+        else alert("틀렸습니다! 정답은 " + solution + "입니다.");
+
+        createExpresion();
+    }
+    </script>
+</head>
+<body>
+        <h1>Math Quiz</h1>
+        <input type="text" id="problem" value="12*2+20-30"><br>
+        <input type="text" id="answer">
+        <button onclick="cal()">정답 알아보기</button>
+</body>
