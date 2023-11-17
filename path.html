@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <canvas id="myCanvas" width="1000" height="1000" style="border: 1px dotted red"></canvas>
+  <script>
+    let canvas = document.getElementById("myCanvas");
+    let context = canvas.getContext("2d");
+
+    // 첫 번째 삼각형
+    context.beginPath();
+    context.moveTo(80, 80);
+    context.lineTo(50, 120);
+    context.lineTo(150, 120);
+    context.fillStyle = "black";
+    context.fill();
+    context.closePath();
+
+    // 두 번째 삼각형
+    context.beginPath();
+    context.moveTo(150, 150);
+    context.lineTo(120, 120);
+    context.lineTo(100, 100);
+    context.fillStyle = "green";
+    context.fill();
+    context.closePath();
+  </script>
+</body>
+</html>

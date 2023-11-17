@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+<script>
+    let canvas = document.getElementById('myCanvas');
+    let context = canvas.getContext('2d');
+    context.beginPath();
+    context.arc(100, 100, 80, 0, 2.0 * Math.PI, false);
+    context.strokeStyle = "red";
+    context.stroke();
+    context.beginPath();
+    context.arc(100, 100, 60, 0, 1.5 * Math.PI, false);
+    context.closePath();
+    context.strokeStyle = "blue";
+    context.stroke();
+    context.beginPath();
+    context.arc(100, 100, 40, 0, 1.5 * Math.PI, false);
+    context.strokeStyle = "green";
+    context.stroke();
+
+    let color = ["red", "blue", "green"];
+    for (let i = 1; i < 25; i++){
+        context.beginPath();
+        context.arc(150, 150, i * 2, 0, 2.0 * Math.PI, false);
+        context.strokeStyle = color[Math.floor(Math.random()*3)];
+        context.stroke();
+        context.closePath();
+    }
+    </script>
+    </body>
+    </html>

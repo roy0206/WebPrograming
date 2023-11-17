@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="myCanvas" width="1000" height="800" style="border: 1px dotted red"></canvas>
+<script>
+let canvas = document.getElementById("myCanvas");
+let context = canvas.getContext("2d");
+context.beginPath();
+context.arc(100, 100, 50, 0, Math.PI * 2, true);
+context.moveTo(120, 130);
+context.arc(100, 130, 20, 0, Math.PI, true);
+context.moveTo(90, 80);
+context.arc(80, 80, 10, 0, Math.PI * 2, true);
+context.moveTo(130, 80);
+context.arc(120, 80, 10, 0, Math.PI * 2, true);
+context.stroke();
+
+let centerX = 300, centerY = 100;
+context.beginPath();
+context.arc(centerX, centerY, 50, 0, Math.PI * 2, true);
+context.moveTo(centerX + 20, centerY + 15);
+context.arc(centerX, centerY + 15, 20, 3, Math.PI, true);
+context.moveTo(centerX - 10, centerY - 20);
+context.arc(centerX - 20, centerY - 20, 10, 0, Math.PI * 1, true);
+context.moveTo(centerX + 30, centerY - 20);
+context.arc(centerX + 20, centerY - 20, 10, 0, Math.PI * 1, true);
+context.stroke();
+</script>
+</body>
+</html>
